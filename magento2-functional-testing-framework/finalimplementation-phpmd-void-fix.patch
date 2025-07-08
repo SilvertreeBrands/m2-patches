@@ -1,0 +1,11 @@
+--- /dev/null
++++ ./dev/tests/static/Magento/CodeMessDetector/Rule/Design/FinalImplementation.php
+@@ -20,7 +20,7 @@
+     /**
+      * @inheritdoc
+      */
+-    public function apply(AbstractNode $node)
++    public function apply(AbstractNode $node): void
+     {
+         if ($node->isFinal()) {
+             $this->addViolation($node, [$node->getType(), $node->getFullQualifiedName()]);
